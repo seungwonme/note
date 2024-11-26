@@ -1,7 +1,12 @@
-'use client';
+"use client";
 
+import { Suspense } from "react";
 import Note from "./components/Note";
 
 export default function Home() {
-  return <Note />;
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <Note />
+    </Suspense>
+  );
 }
